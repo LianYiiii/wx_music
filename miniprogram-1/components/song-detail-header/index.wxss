@@ -1,0 +1,128 @@
+/* components/song-detail-header/index.wxss */
+
+.header {
+  position: relative;
+}
+
+.header .bg-image{
+  width: 100vw;
+  height: 450rpx;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-left: -20rpx;
+  /* background-size: 200%; */
+  /* filter: blur(200) */
+}
+
+
+.header .cover {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 450rpx;
+  margin-left: -20rpx;
+  backdrop-filter: blur(6px);
+}
+
+.header .content {
+  color: #fff;
+}
+
+.header .content .image {
+  position: absolute;
+  top: 50rpx;
+  left: 50rpx;
+  width: 270rpx;
+  height: 270rpx;
+  border-radius: 20rpx;
+}
+
+.header .content .info {
+  position: absolute;
+  top: 50rpx;
+  right:  70rpx;
+  width: 320rpx;
+  height: 300rpx;
+  font-size: 32rpx;
+}
+
+.header .content .info .title {
+  margin-top: 10rpx;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* 这里是超出几行省略 */
+  overflow: hidden;
+}
+
+.header .content .info .author {
+  margin-top: 40rpx;
+  
+}
+
+.header .content .info .author .avatar {
+  display: inline-block;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  vertical-align:text-bottom;
+}
+
+.header .content .info .author .nickname {
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 200rpx;
+  margin-left: 30rpx;
+}
+
+.header .content .info .author .desc {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 30rpx;
+}
+
+
+.header .operation{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 360rpx;
+  left: 50rpx;
+  width: 640rpx;
+  font-size: 36rpx;
+}
+
+.header .operation .favor{
+  display: flex;
+  align-items: center;
+}
+
+.header .operation .favor .icon{
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 10rpx;
+}
+
+.header .operation .favor .text{
+  color: #fff;
+}
+
+.header .operation .share{
+  display: flex;
+  align-items: center;
+}
+
+.header .operation .share .icon{
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 10rpx;
+}
+.header .operation .share .text{
+  color: #fff;
+}

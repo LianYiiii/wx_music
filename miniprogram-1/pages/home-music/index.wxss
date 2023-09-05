@@ -1,0 +1,83 @@
+/* pages/home-music/index.wxss */
+
+.van-search__content{
+  background-color: #fff !important ;
+}
+
+.swiper-image {
+  width: 100%;
+}
+
+.play-bar{
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: #9696969c;
+  height: 44px;
+}
+
+.play-bar .left {
+  display: flex;
+  align-items: center;
+  /* background-color: green; */
+  height: 100%;
+  padding-left: 10px;
+}
+
+.play-bar .right {
+  /* background-color: blue; */
+  height: 100%;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.play-bar .left .album {
+  position: relative;
+  top: -8px;
+  display: flex;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+/* 旋转动画 */
+@keyframes albumRotate {
+  from{
+    transform: rotate(0);
+  }
+
+  to{
+    transform: rotate(360deg);
+  }
+}
+.play-bar .left .album-anim{
+  animation: albumRotate 10s linear infinite;
+}
+
+.play-bar .left .name{
+  font-size: 14px;
+  margin-left: 14px;
+}
+
+.play-bar .right .icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.play-bar .right .list{
+  width: 20px;
+  height: 20px;
+
+}
+
+.bottom-box {
+  padding-bottom: 88rpx;
+}

@@ -1,0 +1,24 @@
+/* components/song-menu-area/index.wxss */
+
+.area .menu-list {
+  white-space: nowrap;
+  /* padding: 0 20rpx; */
+}
+
+.area .menu-list .menu-item {
+  vertical-align: top;
+  display: inline-block;
+  width: 250rpx;
+  height: 300rpx;
+  /* background-color: #ccc; */
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+/* .area .menu-list .menu-item {
+  display: inline-block;
+  width: 300rpx;
+  height: 400rpx;
+  background-color: #ccc;
+  margin-left: 30rpx;
+} */

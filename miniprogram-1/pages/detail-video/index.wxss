@@ -1,0 +1,48 @@
+/* pages/detail-video/index.wxss */
+page{
+  padding-top: 400rpx;
+}
+
+video {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 400rpx
+}
+
+.mv-info {
+  margin: 20rpx 40rpx;
+  /* background-color: red; */
+}
+
+.title {
+  margin-bottom: 20rpx;
+  font-size: 35rpx;
+  font-weight: 700;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* 这里是超出几行省略 */
+  overflow: hidden;
+}
+
+.songerName,
+.songs-info {
+  display: block;
+  font-size: 30rpx;
+  font-weight: 400;
+  color: rgb(146, 142, 142);
+}
+
+.related-mvs{
+  /* background-color: red; */
+  margin: 40rpx 40rpx;
+}
+.related-title{
+  font-weight: 600;
+}
+
+.no-related {
+  margin-top: 20rpx;
+}

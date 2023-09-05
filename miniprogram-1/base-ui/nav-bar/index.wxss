@@ -1,0 +1,61 @@
+/* base-ui/nav-bar/index.wxss */
+
+.nav .nav-bar{
+  display: flex;
+  font-size: 32rpx;
+}
+
+.nav .nav-bar .left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 60px;
+}
+
+.left-slot:empty + .left-arrow {
+  display: block;
+}
+
+.left-arrow {
+  display: none;
+}
+
+.nav .nav-bar .left .left-arrow .img{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.nav .nav-bar .middle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  width: 60px;
+}
+
+.middle-slot:empty + .tab {
+  display: block;
+}
+
+.tab {
+  display: none;
+}
+
+.nav .nav-bar .right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  width: 60px;
+}
+
+.right-slot:empty + .right-text {
+  display: block;
+}
+
+.right-text {
+  display: none;
+}

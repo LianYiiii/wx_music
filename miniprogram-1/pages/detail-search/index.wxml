@@ -1,0 +1,60 @@
+<!--pages/detail-search/index.wxml-->
+<!-- 搜索框 -->
+<van-search 
+  placeholder="请输入搜索关键词" 
+  value="{{searchValue}}"
+  background="#f3f3f3"
+  shape="round"
+  bind:search="getSearchAction"
+  bind:change="getSearchChange"
+  bind: focus="getSearchFocus"
+  bind:cancel="getSearchCancel"
+  show-action
+  class="search"
+/>
+
+<!-- 热门搜索 -->
+<view class="hot" wx:if="{{!searchValue.length && !searchSuggestList.length}}">
+  <area-header title="热门搜索" showRight="{{false}}"></area-header>
+  <view class="hot-list">
+    <block wx:for="{{hotKeyWords}}" wx:if="{{hotKeyWords.length}}" wx:key="first">
+        <view class="hotkeywords-item" bindtap="handleHotSuggestItem" data-item="{{item.first}}">{{item.first}}</view>
+    </block>
+  </view>
+</view>
+
+<!-- 建议搜索 -->
+<view class="suggest" wx:elif="{{searchSuggestList.length && !resultSongs.length}}">
+  <view class="title">搜索"{{searchValue}}"</view>
+  <view class="suggest-song-list">
+    <block wx:for="{{suggestSongsNodes}}" wx:key="keyword">
+      <view class="item" bindtap="handleSuggestItemClick" data-item="{{index}}">
+        <image src="/assets/images/icons/sousuo.png" class="icon" mode="widthFix"/>
+        <!-- <text>{{item.keyword}}</text> -->
+        <rich-text nodes="{{item}}" />
+      </view>
+    </block>
+  </view>
+</view>
+
+<!-- 搜索结果 -->
+<view class="result">
+  <view class="title"></view>
+  <view class="list">
+    <block wx:for="{{resultSongs}}" wx:key="id">
+      <song-item-search songsList="{{item}}" index="{{index}}"></song-item-search>
+      <!-- <song-item-v2 rankingInfo="{{item}}" index="{{index}}"></song-item-v2> -->
+    </block>
+  </view>
+</view>
+
+<!-- 历史搜索 -->
+<view class="history"  wx:if="{{!searchValue.length && !searchSuggestList.length}}">
+  <area-header title="历史搜索" showRight="{{false}}"></area-header>
+  <view class="history-list">
+    <block wx:for="{{historyList}}" wx:if="{{historyList.length}}" wx:key="index">
+    <!-- {{item}} -->
+        <view class="history-item" bindtap="handleHistoryItemClick" data-item="{{index}}">{{item}}</view>
+    </block>
+  </view>
+</view>

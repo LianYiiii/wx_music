@@ -1,0 +1,141 @@
+/* pages/music-player/index.wxss */
+
+page{
+  color: white;
+}
+
+.bg-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* 只有定位的元素才能设置 z-index */
+  z-index: -1;
+}
+
+.cover {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.466);
+  backdrop-filter: blur(10px);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  color: #ccc;
+  /* font-size: 30rpx; */
+  /* background-color: #ccc; */
+}
+
+.center .active {
+  font-size: 32rpx;
+  color: #fff;
+}
+
+.center .divider {
+  margin: 0 20rpx;
+}
+
+.music {
+  display: flex;
+  flex-direction: column;
+}
+
+.music .album{
+  display: flex;
+  width: 700rpx;
+  /* height: 600rpx; */
+  margin: 0 auto;
+  padding-top: 30rpx;
+  flex: 5;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+}
+
+.music .img {
+  /* border: 1px solid blue; */
+  width: 100%;
+  height: 100%;
+  /* width: 80%;
+  flex: 5; */
+}
+
+.music .info {
+  /* background-color: #ccc; */
+  margin: 40rpx 70rpx;
+  font-size: 36rpx;
+}
+
+.music .info .subtitle {
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  line-height: 1.5;
+}
+
+.music .lyric {
+  flex: 1;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  /* background-color: #ccc; */
+}
+
+.music .progress .time{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 30rpx;
+  font-size: 30rpx;
+}
+
+.music .operation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30rpx;
+  /* background-color: blue; */
+}
+
+.music .operation .btn{
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.music .operation .btn-pause{
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.music .operation .btn-prev, .music .operation .btn-next {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.lyric .lyric-list {
+  text-align: center;
+  overflow: hidden;
+  height: 100%;
+}
+
+.lyric .lyric-list .item {
+  /* margin-top: 40rpx; */
+  height: 35px;
+  line-height: 35px;
+  font-size: 32rpx;
+}
+
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  background-color: transparent;
+}
+
+.active{
+  color: rgb(25, 230, 86);
+}

@@ -1,0 +1,38 @@
+function formatCount(count){
+  var counter = parseInt(count);
+
+  if(counter > 100000000){
+    return (counter / 100000000).toFixed(1) + '亿';
+  }else if(counter > 10000){
+    return (counter / 10000).toFixed(1) + '万';
+  }else{
+    return counter + '';
+  }
+};
+
+// 两位数时间
+function padLeftTime(time){
+  // 转为字符串模式
+  time = time + '';
+
+  // 转换为两位字符
+  return ('00' + time).slice(time.length)
+}
+
+function formatDuration(duration){
+  // 毫秒转为秒
+  duration = duration / 1000;
+
+  // 分钟
+  var minute = Math.floor(duration / 60);
+  
+  // 秒
+  var second = Math.floor(duration) % 60;
+
+  return padLeftTime(minute) + ":" + padLeftTime(second);
+}
+
+module.exports={
+  formatCount: formatCount,
+  formatDuration: formatDuration
+}

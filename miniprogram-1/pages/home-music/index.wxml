@@ -1,0 +1,59 @@
+<!--pages/home-music/index.wxml-->
+<!-- 搜索框 -->
+<van-search 
+  disabled
+  placeholder="请输入搜索关键词" 
+  background="#fafafa"
+  shape="round"
+  bind:click-input="handleClickToSearch"
+/>
+
+<!-- 轮播图 -->
+<swiper class="swiper" 	indicator-dots="true" autoplay="true" style="height: {{swiperHeight}}px;">
+  <block wx:for="{{banner}}" wx:key="bannerId">
+    <swiper-item class="swiper-item">
+      <!-- 图片加载完成触发 bindload,参数为大图片的height和Width -->
+      <image class="swiper-image"src="{{item.pic}}" mode="widthFix" bindload="handleSwiperImageLoaded" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 推荐歌曲 -->
+<view class="recommend-song" wx:if="{{recommendSongs.length}}">
+  <area-header title="推荐歌曲" bind:click="handleMoreClick"></area-header>
+  <view class="song-list">
+    <block wx:for="{{recommendSongs}}" wx:key="id"> 
+      <song-item-v1 item="{{item}}" bindtap="handleSongItemClick" data-index="{{index}}"></song-item-v1>
+    </block>
+  </view>
+</view>
+
+<!-- 热门歌单 -->
+<song-menu-area title="热门歌单" item="{{hotSongsMenu}}"  wx:if="{{hotSongsMenu.length}}"></song-menu-area>
+<!-- 推荐歌单 -->
+<song-menu-area title="推荐歌单" item="{{recommendSongsMenu}}"  wx:if="{{recommendSongsMenu.length}}"></song-menu-area>
+
+<!-- 巅峰榜 -->
+<!-- 包含 新歌榜、原创榜、飙升榜 -->
+<view class="ranking">
+  <area-header title="巅峰榜" showRight="{{flase}}"></area-header>
+  <view class="ranking-list">
+  <!-- 遍历对象，item对应value，index对应key -->
+    <block wx:for="{{rankings}}" wx:key="name">
+        <ranking-area-item rankingData="{{item}}" bindtap="handleRankingItemClick" data-idx="{{index}}"></ranking-area-item>
+    </block>
+  </view>
+</view>
+
+<view class="bottom-box" wx:if="{{currentSong.name}}"></view>
+
+<view class="play-bar" wx:if="{{currentSong.name}}">
+  <view class="left" bindtap="handleClickSongName" data-id="{{currentSong.id}}">
+    <image src="{{currentSong.al.picUrl}}" mode="aspectFill" class="album album-anim" style="animation-play-state: {{playAnimState}};"/>
+    <view class="name">{{currentSong.name}}</view>
+  </view>
+  <view class="right">
+    <image src="../../assets/images/icons/{{isPlaying ?'pause':'play'}}.png" bindtap="handlePlayBtnClick" mode="" class="icon play"></image>
+    <image src="../../assets/images/icons/list.png" mode="" class="icon list"></image>
+  </view>
+</view>

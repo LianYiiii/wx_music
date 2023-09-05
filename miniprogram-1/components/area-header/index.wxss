@@ -1,0 +1,38 @@
+/* components/area-header/index.wxss */
+
+.header {
+  /* background-color: #ddd; */
+  margin-top: 20rpx;
+  padding: 20rpx 30rpx;
+  font-size: 38rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1;
+}
+
+.header .slot:empty + .default {
+  /* 仅仅当右半段为空时，才显示“更多” */
+  display: flex;
+}
+
+.header .title {
+  font-weight: 700;
+}
+
+.default {
+    /* 默认状态下，不显示 */
+    display: none;
+}
+
+.header .right {
+
+  font-size: 35rpx;
+}
+
+.header .right .image {
+  width: 25rpx;
+  height: 25rpx;
+  margin-left: 15rpx;
+  /* background-color: #fff; */
+}

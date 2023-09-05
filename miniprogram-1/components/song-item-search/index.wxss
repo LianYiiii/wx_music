@@ -1,0 +1,47 @@
+/* components/song-item-search/index.wxss */
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20rpx;
+  /* background-color: #ddd; */
+  margin-top: 30rpx;
+}
+
+.item .index {
+  /* display: inline-block; */
+  width: 60rpx;
+  margin: 0 20rpx;
+  font-weight: 700;
+  text-align: center;
+}
+
+.item .info {
+  font-size: 36rpx;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 78%;
+  
+}
+
+.item .info .name{ 
+  font-weight: middle;
+  
+}
+
+.item .info .source {
+  display: flex;
+  /* flex-direction: column; */
+  width: 580rpx;
+  font-size: 30rpx;
+  color: rgb(136, 136, 136);  
+}
+
+.item .info .source .alias {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

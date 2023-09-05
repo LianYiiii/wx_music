@@ -1,0 +1,12 @@
+<!--components/song-item-v2/index.wxml-->
+<view class="item" bindtap="handlePlayClick" data-id="{{rankingInfo.tracks[index].id}}">
+  <view class="index">{{index+1}}</view>
+  <view class="info">
+    <view class="name">{{rankingInfo.tracks[index].name}}</view>
+    <view class="source">
+      <!-- <image src="{{rankingInfo.tracks[index].al.picUrl}}" mode="" class="icon"/> -->
+      <text class="artist">{{rankingInfo.tracks[index].ar[0].name}}</text>
+      <text class="alia" wx:if="{{rankingInfo.tracks[index].alia[0]}}"> · {{rankingInfo.tracks[index].alia[0]}}</text>
+    </view>
+  </view>
+</view>

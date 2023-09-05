@@ -1,0 +1,60 @@
+/* components/ranking-area-item/index.wxss */
+
+.ranking-area {
+  position: relative;
+
+  display: flex;
+  margin: 0 30rpx 20rpx;
+  margin-bottom: 30rpx;
+  background-color: rgb(235, 235, 235);
+  border-radius: 10rpx;
+}
+
+.ranking-area .ranking-content {
+  flex: 1;
+  padding: 30rpx 0 30rpx 30rpx;
+  font-size: 30rpx;
+}
+
+.ranking-area .ranking-content .content-title{
+  font-size: 35rpx;
+  font-weight: 700;
+  margin-bottom: 20rpx;
+}
+
+.ranking-area .ranking-content .ranking-list{
+  width: 350rpx;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* .ranking-area .ranking-content .song-item { */
+  /* text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; */
+/* } */
+.ranking-area .ranking-content .ranking-songer{
+  display: inline;
+  color: rgb(150, 150, 150);
+}
+
+.ranking-area .image {
+  width: 250rpx;
+  height: 250rpx;
+  border-radius: 0 10rpx 10rpx 0;
+}
+
+.ranking-area .play-count {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 40rpx;
+  padding: 5rpx 10rpx 5rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 32rpx;
+  background-color: rgba(87, 87, 87, 0.479);
+  border-radius: 10rpx;
+}

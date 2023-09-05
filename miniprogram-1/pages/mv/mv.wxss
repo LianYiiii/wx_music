@@ -1,0 +1,18 @@
+/* pages/mv/mv.wxss */
+
+.mv-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.video-v1{
+  /* display: flex; */
+  width: 350rpx;
+  /* background-color: red; */
+  margin: 15rpx 0rpx;
+}
+
+.video-item-v1{
+  display: flex;
+}

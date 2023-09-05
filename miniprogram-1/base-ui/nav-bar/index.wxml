@@ -1,0 +1,23 @@
+<!--base-ui/nav-bar/index.wxml-->
+<view class="nav">
+  <!-- 顶部通知栏的高度，用盒子把它空出来 -->
+  <view style="height: {{statusBarHeight}}px;"></view>
+  <!-- 页面导航栏 -->
+  <view class="nav-bar" style="height: {{navBarHeight}}px;">
+    <view class="left" bindtap="handleLeftClick">
+      <view class="left-slot"><slot name="left"></slot></view>
+        <view class="left-arrow">
+          <image src="/assets/images/icons/leftArrow.png" mode="" class="img"/>
+        </view>
+      </view>
+    <view class="middle">
+      <view class="middle-slot"><slot name="center"></slot></view>
+      <view class="tab">{{title}}</view>
+    </view>
+    <view class="right">
+      <view class="right-slot"><slot name="right"></slot></view>
+      <view class="right-text">右边</view>
+    </view>
+  </view>
+</view>
+

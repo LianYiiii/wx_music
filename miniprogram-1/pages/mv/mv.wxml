@@ -1,0 +1,7 @@
+<!--pages/mv/mv.wxml-->
+<view class="mv-page">
+<!-- <text>mv页面</text> -->
+  <view wx:for="{{topMVs}}" class="video-v1" wx:key="id">
+    <video-item-v1 item="{{item}}" class="video-item-v1"></video-item-v1>
+  </view>
+</view>
